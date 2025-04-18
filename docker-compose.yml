@@ -1,0 +1,9 @@
+version: '3'
+services:
+  kakotel:
+    build: .
+    ports:
+      - "3000:3000" # Expose Next.js port (for development or direct access)
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
